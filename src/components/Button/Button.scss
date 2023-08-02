@@ -1,0 +1,20 @@
+@use "../../styles/partials/fonts";
+@use "../../styles/partials/colours";
+
+.button {
+  font-family: "Avenir Next Bold";
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  background-color: colours.$brainflix-blue;
+  border-radius: 4px;
+  border: 0px;
+  color: colours.$white;
+  padding: 1rem;
+  position: relative;
+
+  &__icon {
+    position: absolute;
+    left: 0.5rem;
+    top: 0.85rem;
+  }
+}

@@ -1,4 +1,5 @@
 @use "../../styles/partials/fonts";
+@use "../../styles/partials/colours";
 
 .header {
   &__container {
@@ -13,18 +14,44 @@
     margin: auto;
   }
 
+  &__search-profile-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+  }
+
   &__profile-image {
+    display: flex;
     border-radius: 50%;
     width: 2.25rem;
     height: 2.25rem;
   }
 
+  &__input-container {
+    position: relative;
+  }
+
   &__search {
-    background-image: url("../../assets/Icons/search.svg");
-    background-repeat: no-repeat;
+    display: flex;
+    // background-image: url("../../assets/Icons/search.svg");
+    // background-repeat: no-repeat;
     padding-left: 1.25rem;
     height: 2.25rem;
     border-radius: 4px;
     border: 1px solid grey;
+  }
+
+  &__search-icon {
+    position: absolute;
+    top: 0.6rem;
+    padding-left: 0.1rem;
+  }
+
+  &__upload-btn {
+    font-family: "Avenir Next Regular";
+    background-color: colours.$brainflix-blue;
+    border-radius: 4px;
+    border: 0px;
+    color: colours.$white;
   }
 }
