@@ -21,9 +21,10 @@ function Header() {
               ></input>
               <img className="header__search-icon" src={searchIcon} />
             </div>
-            <Avatar src={profilePic} />
+            <Avatar src={profilePic} className="avatar avatar--mobile" />
           </div>
           <Button text="UPLOAD" img={uploadIcon} />
+          <Avatar src={profilePic} className="avatar avatar--tablet-desktop" />
         </div>
       </header>
     </>

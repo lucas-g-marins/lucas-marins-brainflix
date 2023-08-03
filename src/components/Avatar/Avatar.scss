@@ -8,7 +8,25 @@
   width: 2.5rem;
   height: 2.5rem;
 
-  @include global.tablet {
+  &--mobile {
+    @include global.tablet {
+      display: none;
+    }
+
+    @include global.desktop {
+      display: none;
+    }
+  }
+
+  &--tablet-desktop {
     display: none;
+
+    @include global.tablet {
+      display: flex;
+    }
+
+    @include global.desktop {
+      display: flex;
+    }
   }
 }
