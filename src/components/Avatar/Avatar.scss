@@ -1,6 +1,14 @@
+@use "../../styles/partials/fonts";
+@use "../../styles/partials/colours";
+@use "../../styles/partials/global";
+
 .avatar {
   display: flex;
   border-radius: 50%;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
+
+  @include global.tablet {
+    display: none;
+  }
 }

@@ -16,8 +16,9 @@
 
   &__search-profile-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 1rem 0;
+    width: 100%;
   }
 
   &__profile-image {
@@ -29,22 +30,26 @@
 
   &__input-container {
     position: relative;
+    width: 75%;
   }
 
   &__search {
     display: flex;
-    // background-image: url("../../assets/Icons/search.svg");
-    // background-repeat: no-repeat;
-    padding-left: 1.25rem;
+    background-color: colours.$alabaster;
+    width: 100%;
+    padding-left: 1.5rem;
     height: 2.25rem;
     border-radius: 4px;
-    border: 1px solid grey;
+    border: 1px solid colours.$mercury;
+    &::placeholder {
+      color: colours.$brainflix-darkblack;
+    }
   }
 
   &__search-icon {
     position: absolute;
     top: 0.6rem;
-    padding-left: 0.1rem;
+    padding-left: 0.2rem;
   }
 
   &__upload-btn {

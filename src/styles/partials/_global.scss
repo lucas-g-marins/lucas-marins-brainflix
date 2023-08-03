@@ -1,0 +1,16 @@
+@use "./colours";
+@use "./fonts";
+
+// mixins for breakpoints
+
+@mixin tablet {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
