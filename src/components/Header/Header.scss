@@ -1,17 +1,30 @@
 @use "../../styles/partials/fonts";
 @use "../../styles/partials/colours";
+@use "../../styles/partials/global";
 
 .header {
   &__container {
     display: flex;
     flex-direction: column;
     padding: 1rem;
+
+    @include global.tablet {
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
   }
 
   &__logo {
     width: 7.5rem;
     height: 1.5rem;
     margin: auto;
+    display: flex;
+
+    @include global.tablet {
+      margin: 1rem 0;
+      align-self: center;
+    }
   }
 
   &__search-profile-container {
@@ -19,18 +32,20 @@
     justify-content: space-between;
     padding: 1rem 0;
     width: 100%;
-  }
 
-  &__profile-image {
-    display: flex;
-    border-radius: 50%;
-    width: 2.25rem;
-    height: 2.25rem;
+    @include global.tablet {
+      width: 30%;
+    }
   }
 
   &__input-container {
     position: relative;
+    display: flex;
     width: 75%;
+
+    @include global.tablet {
+      width: 100%;
+    }
   }
 
   &__search {
@@ -53,11 +68,10 @@
     padding-left: 0.2rem;
   }
 
-  &__upload-btn {
-    font-family: "Avenir Next Regular";
-    background-color: colours.$brainflix-blue;
-    border-radius: 4px;
-    border: 0px;
-    color: colours.$white;
+  &__button-container {
+    @include global.tablet {
+      width: 25%;
+      align-self: center;
+    }
   }
 }

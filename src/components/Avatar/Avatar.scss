@@ -8,6 +8,11 @@
   width: 2.5rem;
   height: 2.5rem;
 
+  @include global.tablet {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
   &--mobile {
     @include global.tablet {
       display: none;
@@ -23,6 +28,7 @@
 
     @include global.tablet {
       display: flex;
+      align-self: center;
     }
 
     @include global.desktop {

@@ -23,7 +23,9 @@ function Header() {
             </div>
             <Avatar src={profilePic} className="avatar avatar--mobile" />
           </div>
-          <Button text="UPLOAD" img={uploadIcon} />
+          <div className="header__button-container">
+            <Button text="UPLOAD" img={uploadIcon} />
+          </div>
           <Avatar src={profilePic} className="avatar avatar--tablet-desktop" />
         </div>
       </header>
