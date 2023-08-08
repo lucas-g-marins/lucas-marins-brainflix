@@ -10,8 +10,26 @@
 
     @include global.tablet {
       flex-direction: row;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+    }
+
+    @include global.desktop {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__logo-container {
+    @include global.tablet {
+      width: 20%;
+      display: flex;
+    }
+
+    @include global.desktop {
+      width: 30%;
+      display: flex;
+      justify-content: space-around;
     }
   }
 
@@ -24,16 +42,43 @@
     @include global.tablet {
       margin: 1rem 0;
       align-self: center;
+      margin-right: 6rem;
+    }
+
+    @include global.desktop {
+      margin: 1rem 0;
+      align-self: center;
+      margin-right: 6rem;
+      width: 8rem;
+      height: 2rem;
+    }
+  }
+
+  &__right-side {
+    @include global.tablet {
+      width: 70%;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    @include global.desktop {
+      width: 60%;
+      display: flex;
+      justify-content: space-evenly;
     }
   }
 
   &__search-profile-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 1rem 0;
     width: 100%;
 
     @include global.tablet {
+      width: 40%;
+    }
+
+    @include global.desktop {
       width: 30%;
     }
   }
@@ -41,24 +86,38 @@
   &__input-container {
     position: relative;
     display: flex;
-    width: 75%;
+    width: 80%;
 
     @include global.tablet {
+      width: 100%;
+    }
+
+    @include global.desktop {
       width: 100%;
     }
   }
 
   &__search {
     display: flex;
-    background-color: colours.$alabaster;
+    background-color: colours.$form-background;
     width: 100%;
     padding-left: 1.5rem;
     height: 2.25rem;
     border-radius: 4px;
-    border: 1px solid colours.$mercury;
+    border: 1px solid colours.$divider-line;
     &::placeholder {
-      color: colours.$brainflix-darkblack;
+      color: colours.$video-comp;
       font-family: "Avenir Next Regular";
+    }
+
+    @include global.tablet {
+      height: 3.25rem;
+      font-size: 1rem;
+    }
+
+    @include global.desktop {
+      height: 3.25rem;
+      font-size: 1rem;
     }
   }
 
@@ -66,10 +125,36 @@
     position: absolute;
     top: 0.6rem;
     padding-left: 0.2rem;
+
+    @include global.tablet {
+      top: 1rem;
+    }
+
+    @include global.desktop {
+      top: 1rem;
+    }
+  }
+
+  &__avatar-container {
+    width: 15%;
+    padding-left: 1.5rem;
+
+    @include global.tablet {
+      align-self: center;
+    }
+
+    @include global.desktop {
+      align-self: center;
+    }
   }
 
   &__button-container {
     @include global.tablet {
+      width: 35%;
+      align-self: center;
+    }
+
+    @include global.desktop {
       width: 25%;
       align-self: center;
     }

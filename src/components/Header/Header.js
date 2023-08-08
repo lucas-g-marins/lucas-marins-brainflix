@@ -11,22 +11,33 @@ function Header() {
     <>
       <header className="header">
         <div className="header__container">
-          <img src={logo} className="header__logo" />
-          <div className="header__search-profile-container">
-            <div className="header__input-container">
-              <input
-                type="text"
-                placeholder="Search"
-                className="header__search"
-              ></input>
-              <img className="header__search-icon" src={searchIcon} />
+          <div className="header__logo-container">
+            <img src={logo} className="header__logo" />
+          </div>
+          <div className="header__right-side">
+            <div className="header__search-profile-container">
+              <div className="header__input-container">
+                <input
+                  type="text"
+                  placeholder="Search"
+                  className="header__search"
+                ></input>
+                <img className="header__search-icon" src={searchIcon} />
+              </div>
+              <div className="header__avatar-container">
+                <Avatar src={profilePic} className="avatar avatar--mobile" />
+              </div>
             </div>
-            <Avatar src={profilePic} className="avatar avatar--mobile" />
+            <div className="header__button-container">
+              <Button text="UPLOAD" img={uploadIcon} />
+            </div>
+            <div className="header__avatar-container">
+              <Avatar
+                src={profilePic}
+                className="avatar avatar--tablet-desktop"
+              />
+            </div>
           </div>
-          <div className="header__button-container">
-            <Button text="UPLOAD" img={uploadIcon} />
-          </div>
-          <Avatar src={profilePic} className="avatar avatar--tablet-desktop" />
         </div>
       </header>
     </>
