@@ -4,7 +4,37 @@
 
 .main-video {
   width: 100%;
+
+  &__video-container {
+    width: 100%;
+  }
+
   &__video {
     width: 100%;
+  }
+
+  &__title-container {
+    padding: 1rem;
+  }
+
+  &__stats {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__stats-copy {
+    margin: 0.5rem;
+  }
+
+  &__channel {
+    margin: 0.5rem;
+  }
+
+  &__views-container {
+    display: flex;
+  }
+
+  &__likes-container {
+    display: flex;
   }
 }

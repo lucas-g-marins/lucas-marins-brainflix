@@ -1,0 +1,7 @@
+@use "../../styles/partials/colours";
+
+.divider {
+  height: 1px;
+  background-color: colours.$divider-line;
+  padding: 0 1rem;
+}
