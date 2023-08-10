@@ -19,15 +19,30 @@
 
   &__stats {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    padding: 0 1rem;
+  }
+
+  &__copy {
+    padding: 0 1rem;
   }
 
   &__stats-copy {
     margin: 0.5rem;
+    color: colours.$secondary-text;
+  }
+
+  &__channel-date {
+    padding-right: 2.5rem;
   }
 
   &__channel {
     margin: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  &__views-likes {
+    padding-left: 2.5rem;
   }
 
   &__views-container {
@@ -36,5 +51,9 @@
 
   &__likes-container {
     display: flex;
+  }
+
+  &__description-container {
+    padding: 0 1rem;
   }
 }

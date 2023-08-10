@@ -3,43 +3,79 @@ import React, { useState } from "react";
 import Divider from "../Divider/Divider";
 import ViewsIcon from "../../assets/Icons/views.svg";
 import LikesIcon from "../../assets/Icons/likes.svg";
+import Comments from "../Comments/Comments";
+import Videos from "../../data/videos.json";
+import VideoDetails from "../../data/video-details.json";
+
+const videoStats = VideoDetails;
+
+const {
+  id,
+  title,
+  channel,
+  image,
+  description,
+  views,
+  likes,
+  duration,
+  video,
+  timestamp,
+  comments,
+} = videoStats;
 
 function MainVideo() {
+  // function for finding specific video
+  function findVideo(element) {
+    const result = videoStats.find(({ id }) => id === element);
+    return result;
+  }
+
   // create use state for dynamic objects
   const [videoThumbnail, setVideoThumbnail] = useState(
     "https://i.imgur.com/l2Xfgpl.jpg"
   );
   const [videoTitle, setVideoTitle] = useState("BMX Rampage: 2021 Highlights");
+
+  const [videoId, setVideoId] = useState(
+    findVideo("84e96018-4022-434e-80bf-000ce4cd12b8")
+  );
+
   return (
     <div className="main-video">
       <div className="main-video__video-container">
         <video
           className="main-video__video"
-          poster={videoThumbnail}
+          poster={videoId.image}
           controls
         ></video>
       </div>
       <div className="main-video__title-container">
-        <h1 className="main-video__title">{videoTitle}</h1>
+        <h1 className="main-video__title">{videoId.title}</h1>
       </div>
       <Divider />
+      {/* Video Stats */}
       <div className="main-video__stats">
         <div className="main-video__channel-date">
-          <h3 className="main-video__channel">By Red Crow</h3>
+          <h3 className="main-video__channel">By {videoId.channel}</h3>
           <h4 className="main-video__stats-copy">07/11/2021</h4>
         </div>
         <div className="main-video__views-likes">
           <div className="main-video__views-container">
             <img src={ViewsIcon}></img>
-            <h4 className="main-video__stats-copy">100</h4>
+            <h4 className="main-video__stats-copy">{videoId.views}</h4>
           </div>
           <div className="main-video__likes-container">
             <img src={LikesIcon}></img>
-            <h4 className="main-video__stats-copy">25</h4>
+            <h4 className="main-video__stats-copy">{videoId.likes}</h4>
           </div>
         </div>
       </div>
       <Divider />
+      {/* Description */}
+      <div className="main-video__description-container">
+        <p className="main-video__description">{videoId.description}</p>
+      </div>
+      <Comments />
     </div>
   );
 }

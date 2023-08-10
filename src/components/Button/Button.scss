@@ -12,6 +12,10 @@
   padding: 1rem;
   position: relative;
   width: 100%;
+  &:hover {
+    background-color: colours.$cta-hover;
+    cursor: pointer;
+  }
 
   &__icon {
     position: absolute;
