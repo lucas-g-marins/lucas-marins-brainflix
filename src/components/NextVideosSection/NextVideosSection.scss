@@ -1,0 +1,10 @@
+@use "../../styles/partials/fonts";
+@use "../../styles/partials/colours";
+@use "../../styles/partials/global";
+
+.next-videos {
+  &__section-title {
+    color: colours.$secondary-text;
+    padding-left: 1rem;
+  }
+}

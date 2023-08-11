@@ -6,8 +6,11 @@ import LikesIcon from "../../assets/Icons/likes.svg";
 import CommentSection from "../CommentSection/CommentSection";
 import Videos from "../../data/videos.json";
 import VideoDetails from "../../data/video-details.json";
+import NextVideosSection from "../NextVideosSection/NextVideosSection";
 
 const videoStats = VideoDetails;
+
+const videoTitles = Videos;
 
 // function for setting readable date from timestamp
 function setDate(date) {
@@ -69,6 +72,7 @@ function MainVideo() {
         <p className="main-video__description">{videoId.description}</p>
       </div>
       <CommentSection videoComments={videoId.comments} />
+      <NextVideosSection mainVideoId={videoId} videosArray={videoTitles} />
     </div>
   );
 }

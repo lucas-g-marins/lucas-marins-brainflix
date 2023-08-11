@@ -8,7 +8,7 @@
 
   &__avatar-container {
     width: 20%;
-    padding-top: 1rem;
+    padding: 1rem 0 0 1rem;
   }
 
   &__name-date-container {
@@ -22,11 +22,11 @@
   }
 
   &__date {
-    padding-right: 1rem;
+    padding-right: 2rem;
   }
 
   &__content {
-    padding-left: 1rem;
+    padding: 0 1rem;
   }
 
   &__copy {
