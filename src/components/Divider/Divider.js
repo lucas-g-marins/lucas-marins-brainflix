@@ -1,7 +1,7 @@
 import "./Divider.scss";
 
-function Divider() {
-  return <div className="divider"></div>;
+function Divider({ className }) {
+  return <div className={className}></div>;
 }
 
 export default Divider;

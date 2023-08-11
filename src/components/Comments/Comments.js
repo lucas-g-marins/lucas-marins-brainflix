@@ -29,7 +29,7 @@ function Comments({ name, comment, date }) {
           </div>
         </div>
       </div>
-      <Divider />
+      <Divider className="divider" />
     </>
   );
 }

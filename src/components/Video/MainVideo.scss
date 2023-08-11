@@ -17,10 +17,20 @@
     padding: 1rem;
   }
 
+  &__title {
+    @include global.tablet {
+      margin: 0;
+    }
+  }
+
   &__stats {
     display: flex;
     justify-content: flex-start;
     padding: 0 1rem;
+
+    @include global.tablet {
+      justify-content: space-between;
+    }
   }
 
   &__copy {
@@ -34,6 +44,10 @@
 
   &__channel-date {
     padding-right: 2.5rem;
+
+    @include global.tablet {
+      display: flex;
+    }
   }
 
   &__channel {
@@ -43,6 +57,12 @@
 
   &__views-likes {
     padding-left: 2.5rem;
+
+    @include global.tablet {
+      display: flex;
+      align-items: center;
+      padding-right: 1rem;
+    }
   }
 
   &__views-container {

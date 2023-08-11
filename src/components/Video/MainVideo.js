@@ -46,7 +46,7 @@ function MainVideo() {
       <div className="main-video__title-container">
         <h1 className="main-video__title">{videoId.title}</h1>
       </div>
-      <Divider />
+      <Divider className="divider divider--only-mobile" />
       {/* Video Stats */}
       <div className="main-video__stats">
         <div className="main-video__channel-date">
@@ -66,7 +66,7 @@ function MainVideo() {
           </div>
         </div>
       </div>
-      <Divider />
+      <Divider className="divider" />
       {/* Description */}
       <div className="main-video__description-container">
         <p className="main-video__description">{videoId.description}</p>

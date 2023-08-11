@@ -4,10 +4,24 @@
 
 .next-video {
   display: flex;
+  padding-bottom: 0.75rem;
+
+  &__image-container {
+    padding-right: 2rem;
+  }
 
   &__image {
     width: 6rem;
     height: 4rem;
     border-radius: 4px;
+  }
+
+  &__copy-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__copy {
+    margin: 0.25rem 0;
   }
 }
