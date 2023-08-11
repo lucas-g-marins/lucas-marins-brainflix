@@ -72,7 +72,11 @@ function MainVideo() {
         <p className="main-video__description">{videoId.description}</p>
       </div>
       <CommentSection videoComments={videoId.comments} />
-      <NextVideosSection mainVideoId={videoId} videosArray={videoTitles} />
+      <NextVideosSection
+        mainVideoId={videoId}
+        videosArray={videoStats}
+        updateState={setVideoId}
+      />
     </div>
   );
 }

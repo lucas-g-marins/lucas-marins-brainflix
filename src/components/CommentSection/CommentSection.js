@@ -8,11 +8,11 @@ import Divider from "../Divider/Divider";
 
 function CommentSection({ videoComments }) {
   // count amount of comments
-  let noComments = videoComments.length;
+  // let noComments = videoComments.length;
 
   return (
     <>
-      <h3 className="comment-section__copy">{noComments} comments</h3>
+      {/* <h3 className="comment-section__copy">{noComments} comments</h3> */}
       <div className="comment-section__input-comment-container">
         <div className="comment-section__avatar-container">
           <Avatar src={profilePic} className="avatar" />
