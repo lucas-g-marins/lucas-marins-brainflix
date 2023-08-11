@@ -9,19 +9,15 @@ import VideoDetails from "../../data/video-details.json";
 
 const videoStats = VideoDetails;
 
-const {
-  id,
-  title,
-  channel,
-  image,
-  description,
-  views,
-  likes,
-  duration,
-  video,
-  timestamp,
-  comments,
-} = videoStats;
+// function for setting readable date from timestamp
+function setDate(date) {
+  let newDate = new Date(date);
+  let year = newDate.getFullYear();
+  let month = newDate.getMonth() + 1;
+  let day = newDate.getDate();
+  let fullDate = `${month}/${day}/${year}`;
+  return fullDate;
+}
 
 function MainVideo() {
   // function for finding specific video
@@ -52,7 +48,9 @@ function MainVideo() {
       <div className="main-video__stats">
         <div className="main-video__channel-date">
           <h3 className="main-video__channel">By {videoId.channel}</h3>
-          <h4 className="main-video__stats-copy">07/11/2021</h4>
+          <h4 className="main-video__stats-copy">
+            {setDate(videoId.timestamp)}
+          </h4>
         </div>
         <div className="main-video__views-likes">
           <div className="main-video__views-container">
