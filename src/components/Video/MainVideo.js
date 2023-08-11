@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Divider from "../Divider/Divider";
 import ViewsIcon from "../../assets/Icons/views.svg";
 import LikesIcon from "../../assets/Icons/likes.svg";
-import Comments from "../Comments/Comments";
+import CommentSection from "../CommentSection/CommentSection";
 import Videos from "../../data/videos.json";
 import VideoDetails from "../../data/video-details.json";
 
@@ -30,12 +30,7 @@ function MainVideo() {
     return result;
   }
 
-  // create use state for dynamic objects
-  const [videoThumbnail, setVideoThumbnail] = useState(
-    "https://i.imgur.com/l2Xfgpl.jpg"
-  );
-  const [videoTitle, setVideoTitle] = useState("BMX Rampage: 2021 Highlights");
-
+  // use state for video
   const [videoId, setVideoId] = useState(
     findVideo("84e96018-4022-434e-80bf-000ce4cd12b8")
   );
@@ -75,7 +70,7 @@ function MainVideo() {
       <div className="main-video__description-container">
         <p className="main-video__description">{videoId.description}</p>
       </div>
-      <Comments />
+      <CommentSection videoComments={videoId.comments} />
     </div>
   );
 }

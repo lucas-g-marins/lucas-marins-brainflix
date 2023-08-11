@@ -1,0 +1,39 @@
+@use "../../styles/partials/fonts";
+@use "../../styles/partials/colours";
+@use "../../styles/partials/global";
+
+.comment-section {
+  &__copy {
+    padding: 0 1rem;
+  }
+
+  &__input-comment-container {
+    display: flex;
+    width: 100%;
+  }
+
+  &__avatar-container {
+    padding: 0 1rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  &__label {
+    color: colours.$secondary-text;
+    font-size: 0.85rem;
+  }
+
+  &__input {
+    margin: 0.35rem 0 1rem 0;
+  }
+}
+
+label,
+textarea {
+  display: flex;
+  flex-direction: column;
+}
