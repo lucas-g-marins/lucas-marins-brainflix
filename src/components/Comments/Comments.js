@@ -1,16 +1,25 @@
 import "./Comments.scss";
 import Avatar from "../Avatar/Avatar";
 
+function setDate(date) {
+  let newDate = new Date(date);
+  let year = newDate.getFullYear();
+  let month = newDate.getMonth() + 1;
+  let day = newDate.getDate();
+  let fullDate = `${month}/${day}/${year}`;
+  return fullDate;
+}
+
 function Comments({ key, name, comment, date }) {
   return (
     <div className="comment">
       <div className="comment__avatar-container">
-        <Avatar />
+        <Avatar className="avatar" />
       </div>
       <div className="comment__content-container">
         <div className="comment__name-date-container">
-          <p>{name}</p>
-          <p>{date}</p>
+          <p className="comment__name">{name}</p>
+          <p className="comment__date">{setDate(date)}</p>
         </div>
         <div className="comment__content">
           <p className="comment__copy">{comment}</p>

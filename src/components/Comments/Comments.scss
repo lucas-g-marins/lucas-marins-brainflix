@@ -1,0 +1,34 @@
+@use "../../styles/partials/fonts";
+@use "../../styles/partials/colours";
+@use "../../styles/partials/global";
+
+.comment {
+  display: flex;
+
+  &__avatar-container {
+    width: 20%;
+    padding-top: 1rem;
+  }
+
+  &__name-date-container {
+    display: flex;
+    padding-left: 1rem;
+    justify-content: space-between;
+  }
+
+  &__name {
+    font-family: "Avenir Next Bold";
+  }
+
+  &__date {
+    padding-right: 1rem;
+  }
+
+  &__content {
+    padding-left: 1rem;
+  }
+
+  &__copy {
+    margin: 0;
+  }
+}

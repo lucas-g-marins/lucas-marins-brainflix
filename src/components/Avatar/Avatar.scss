@@ -7,6 +7,7 @@
   border-radius: 50%;
   width: 2.5rem;
   height: 2.5rem;
+  background-color: colours.$divider-line;
 
   @include global.tablet {
     width: 2.75rem;
