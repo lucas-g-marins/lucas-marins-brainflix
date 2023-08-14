@@ -31,6 +31,7 @@ textarea {
     font-family: "Avenir Next Regular";
   }
   &:focus {
-    border-color: colours.$primary-cta;
+    border: 2px solid colours.$primary-cta;
+    outline: none;
   }
 }

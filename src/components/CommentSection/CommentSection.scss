@@ -39,11 +39,21 @@
 
     @include global.tablet {
       width: 30rem;
+      height: 2.75rem;
+      padding: 0.75rem;
     }
   }
 
   &__button-container {
     width: 100%;
+
+    @include global.tablet {
+      display: flex;
+      align-items: center;
+      width: 10rem;
+      margin-left: 2rem;
+      padding: 0;
+    }
   }
 }
 

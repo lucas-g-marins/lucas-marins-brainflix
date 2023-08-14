@@ -9,6 +9,10 @@
   &__avatar-container {
     width: 20%;
     padding: 0 0 0 1rem;
+
+    @include global.tablet {
+      width: 10%;
+    }
   }
 
   &__name-date-container {
@@ -31,5 +35,6 @@
 
   &__copy {
     margin: 0;
+    padding: 0.25rem 0 0.5rem 0;
   }
 }

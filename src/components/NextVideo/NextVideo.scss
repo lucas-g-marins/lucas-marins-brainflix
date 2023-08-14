@@ -7,6 +7,10 @@
   padding: 0 0 0.75rem 1rem;
   cursor: pointer;
 
+  @include global.tablet {
+    width: 40%;
+  }
+
   &__image-container {
     padding-right: 1rem;
   }
@@ -15,6 +19,11 @@
     width: 6rem;
     height: 4rem;
     border-radius: 4px;
+
+    @include global.tablet {
+      width: 8rem;
+      height: 5rem;
+    }
   }
 
   &__copy-container {

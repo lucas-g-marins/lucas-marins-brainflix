@@ -1,5 +1,6 @@
 @use "../../styles/partials/fonts";
 @use "../../styles/partials/colours";
+@use "../../styles/partials/global";
 
 .button {
   font-family: "Avenir Next Bold";
@@ -22,5 +23,9 @@
     position: absolute;
     left: 0.5rem;
     top: 0.5rem;
+  }
+
+  @include global.tablet {
+    width: 9.75rem;
   }
 }
