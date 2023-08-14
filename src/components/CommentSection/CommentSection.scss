@@ -4,7 +4,7 @@
 
 .comment-section {
   &__copy {
-    padding: 0 1rem;
+    padding: 0 1rem 1rem 1rem;
   }
 
   &__input-comment-container {
@@ -14,7 +14,7 @@
   }
 
   &__avatar-container {
-    padding: 0 1rem;
+    padding: 1rem 1rem;
   }
 
   &__form {
@@ -51,4 +51,5 @@ label,
 textarea {
   display: flex;
   flex-direction: column;
+  font-family: "Avenir Next Regular";
 }

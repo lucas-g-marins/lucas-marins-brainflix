@@ -32,7 +32,7 @@ function CommentSection({ videoComments }) {
           </div>
         </form>
       </div>
-      <Divider />
+      <Divider className="divider" />
       {videoComments.map((content) => (
         <Comments
           key={content.id}

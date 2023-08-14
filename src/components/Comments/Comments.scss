@@ -4,11 +4,11 @@
 
 .comment {
   display: flex;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 0;
 
   &__avatar-container {
     width: 20%;
-    padding: 1rem 0 0 1rem;
+    padding: 0 0 0 1rem;
   }
 
   &__name-date-container {
