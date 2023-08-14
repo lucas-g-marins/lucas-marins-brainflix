@@ -145,9 +145,10 @@
     @include global.desktop {
       display: flex;
       flex-direction: column;
-      width: 65%;
+      width: 70%;
       padding-left: 8rem;
       border-right: 2px solid colours.$divider-line;
+      overflow: hidden;
     }
   }
 

@@ -6,6 +6,11 @@
   background-color: colours.$divider-line;
   margin: 0 1rem;
 
+  @include global.desktop {
+    width: 98.75%;
+    height: 2px;
+  }
+
   &--only-mobile {
     @include global.tablet {
       display: none;
