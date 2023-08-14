@@ -10,5 +10,9 @@
     @include global.tablet {
       display: none;
     }
+
+    @include global.desktop {
+      display: none;
+    }
   }
 }

@@ -29,6 +29,10 @@
   &__copy-container {
     display: flex;
     flex-direction: column;
+
+    @include global.desktop {
+      padding-right: 2rem;
+    }
   }
 
   &__copy {

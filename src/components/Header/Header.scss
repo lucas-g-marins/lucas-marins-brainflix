@@ -64,7 +64,7 @@
     @include global.desktop {
       width: 60%;
       display: flex;
-      justify-content: space-evenly;
+      justify-content: center;
     }
   }
 
@@ -116,7 +116,7 @@
     }
 
     @include global.desktop {
-      height: 3.25rem;
+      height: 2.5rem;
       font-size: 1rem;
     }
   }
@@ -128,10 +128,12 @@
 
     @include global.tablet {
       top: 0.6rem;
+      padding-left: 0.2rem;
     }
 
     @include global.desktop {
-      top: 1rem;
+      top: 0.6rem;
+      padding-left: 0.3rem;
     }
   }
 
@@ -145,6 +147,7 @@
 
     @include global.desktop {
       align-self: center;
+      padding-left: 0;
     }
   }
 

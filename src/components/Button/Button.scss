@@ -28,4 +28,8 @@
   @include global.tablet {
     width: 9.75rem;
   }
+
+  @include global.desktop {
+    width: 10.75rem;
+  }
 }

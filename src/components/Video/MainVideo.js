@@ -43,40 +43,46 @@ function MainVideo() {
           controls
         ></video>
       </div>
-      <div className="main-video__title-container">
-        <h1 className="main-video__title">{videoId.title}</h1>
-      </div>
-      <Divider className="divider divider--only-mobile" />
-      {/* Video Stats */}
-      <div className="main-video__stats">
-        <div className="main-video__channel-date">
-          <h3 className="main-video__channel">By {videoId.channel}</h3>
-          <h4 className="main-video__stats-copy">
-            {setDate(videoId.timestamp)}
-          </h4>
-        </div>
-        <div className="main-video__views-likes">
-          <div className="main-video__views-container">
-            <img src={ViewsIcon}></img>
-            <h4 className="main-video__stats-copy">{videoId.views}</h4>
+      <div className="brainflix-content">
+        <div className="brainflix-content__main-video">
+          <div className="main-video__title-container">
+            <h1 className="main-video__title">{videoId.title}</h1>
           </div>
-          <div className="main-video__likes-container">
-            <img src={LikesIcon}></img>
-            <h4 className="main-video__stats-copy">{videoId.likes}</h4>
+          <Divider className="divider divider--only-mobile" />
+          {/* Video Stats */}
+          <div className="main-video__stats">
+            <div className="main-video__channel-date">
+              <h3 className="main-video__channel">By {videoId.channel}</h3>
+              <h4 className="main-video__stats-copy">
+                {setDate(videoId.timestamp)}
+              </h4>
+            </div>
+            <div className="main-video__views-likes">
+              <div className="main-video__views-container">
+                <img src={ViewsIcon}></img>
+                <h4 className="main-video__stats-copy">{videoId.views}</h4>
+              </div>
+              <div className="main-video__likes-container">
+                <img src={LikesIcon}></img>
+                <h4 className="main-video__stats-copy">{videoId.likes}</h4>
+              </div>
+            </div>
           </div>
+          <Divider className="divider" />
+          {/* Description */}
+          <div className="main-video__description-container">
+            <p className="main-video__description">{videoId.description}</p>
+          </div>
+          <CommentSection videoComments={videoId.comments} />
+        </div>
+        <div className="brainflix-content__next-video">
+          <NextVideosSection
+            mainVideoId={videoId}
+            videosArray={videoStats}
+            updateState={setVideoId}
+          />
         </div>
       </div>
-      <Divider className="divider" />
-      {/* Description */}
-      <div className="main-video__description-container">
-        <p className="main-video__description">{videoId.description}</p>
-      </div>
-      <CommentSection videoComments={videoId.comments} />
-      <NextVideosSection
-        mainVideoId={videoId}
-        videosArray={videoStats}
-        updateState={setVideoId}
-      />
     </div>
   );
 }

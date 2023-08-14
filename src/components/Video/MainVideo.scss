@@ -6,14 +6,20 @@
   width: 100%;
 
   &__video-container {
-    width: 100vw;
+    width: 100%;
     height: calc((100vw * 9) / 16);
     background-color: colours.$video-comp;
     box-sizing: border-box;
-    margin-bottom: 0.8rem;
+    margin: 0 0 0.8rem 0;
     padding: 0;
 
     @include global.tablet {
+      display: flex;
+      justify-content: center;
+    }
+
+    @include global.desktop {
+      height: calc((70vw * 9) / 16);
       display: flex;
       justify-content: center;
     }
@@ -26,6 +32,10 @@
 
     @include global.tablet {
       width: 100%;
+    }
+
+    @include global.desktop {
+      width: 70%;
     }
   }
 
@@ -68,6 +78,11 @@
     @include global.tablet {
       display: flex;
     }
+
+    @include global.desktop {
+      display: flex;
+      padding: 0;
+    }
   }
 
   &__channel {
@@ -75,6 +90,10 @@
     padding-bottom: 0.5rem;
 
     @include global.tablet {
+      padding-right: 1rem;
+    }
+
+    @include global.desktop {
       padding-right: 1rem;
     }
   }
@@ -87,12 +106,22 @@
       align-items: center;
       padding-right: 1rem;
     }
+
+    @include global.desktop {
+      display: flex;
+      align-items: center;
+      padding: 0 1rem 0 0;
+    }
   }
 
   &__views-container {
     display: flex;
 
     @include global.tablet {
+      padding-right: 1rem;
+    }
+
+    @include global.desktop {
       padding-right: 1rem;
     }
   }
@@ -103,5 +132,32 @@
 
   &__description-container {
     padding: 1rem 1rem;
+  }
+}
+
+.brainflix-content {
+  @include global.desktop {
+    display: flex;
+    width: 100%;
+  }
+
+  &__main-video {
+    @include global.desktop {
+      display: flex;
+      flex-direction: column;
+      width: 65%;
+      padding-left: 8rem;
+      border-right: 2px solid colours.$divider-line;
+    }
+  }
+
+  &__next-video {
+    @include global.desktop {
+      width: 35%;
+      box-sizing: border-box;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
   }
 }

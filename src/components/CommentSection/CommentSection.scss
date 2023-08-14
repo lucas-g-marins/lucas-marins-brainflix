@@ -15,6 +15,10 @@
 
   &__avatar-container {
     padding: 1rem 1rem;
+
+    @include global.desktop {
+      width: 10%;
+    }
   }
 
   &__form {
@@ -23,6 +27,10 @@
     width: 80%;
 
     @include global.tablet {
+      flex-direction: row;
+    }
+
+    @include global.desktop {
       flex-direction: row;
     }
   }
@@ -42,12 +50,26 @@
       height: 2.75rem;
       padding: 0.75rem;
     }
+
+    @include global.desktop {
+      width: 30rem;
+      height: 2.75rem;
+      padding: 0.75rem;
+    }
   }
 
   &__button-container {
     width: 100%;
 
     @include global.tablet {
+      display: flex;
+      align-items: center;
+      width: 10rem;
+      margin-left: 2rem;
+      padding: 0;
+    }
+
+    @include global.desktop {
       display: flex;
       align-items: center;
       width: 10rem;
