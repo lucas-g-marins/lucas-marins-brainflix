@@ -1,0 +1,19 @@
+@use "../styles/partials/fonts";
+@use "../styles/partials/colours";
+@use "../styles/partials/global";
+
+.upload-video {
+  padding: 0 1rem;
+
+  &__title {
+    padding: 1rem 0;
+  }
+
+  &__thumbnail-title {
+    color: colours.$secondary-text;
+  }
+
+  &__thumbnail {
+    width: 100%;
+  }
+}
