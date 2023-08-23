@@ -40,7 +40,12 @@
 
   &__cancel {
     color: colours.$primary-cta;
+    font-family: "Avenir Next Bold";
+    font-size: 0.85rem;
     text-align: center;
     padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
   }
 }

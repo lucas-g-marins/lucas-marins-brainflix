@@ -38,6 +38,7 @@
     height: 1.5rem;
     margin: auto;
     display: flex;
+    cursor: pointer;
 
     @include global.tablet {
       margin: 1rem 0;

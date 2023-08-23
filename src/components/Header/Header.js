@@ -5,12 +5,17 @@ import Avatar from "../Avatar/Avatar";
 import Button from "../Button/Button";
 import uploadIcon from "../../assets/Icons/upload.svg";
 import searchIcon from "../../assets/Icons/search.svg";
-import { BrowserRouter, Link, Router, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
   let navigate = useNavigate();
+
   function handleClick() {
     navigate("/upload");
+  }
+
+  function goHome() {
+    navigate("/");
   }
 
   return (
@@ -18,7 +23,7 @@ function Header() {
       <header className="header">
         <div className="header__container">
           <div className="header__logo-container">
-            <img src={logo} className="header__logo" onClick={handleClick} />
+            <img src={logo} className="header__logo" onClick={goHome} />
           </div>
           <div className="header__right-side">
             <div className="header__search-profile-container">

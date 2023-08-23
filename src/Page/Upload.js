@@ -34,7 +34,9 @@ function Upload() {
           </label>
           <Button text="PUBLISH" img={PublishIcon} />
         </form>
-        <h3 className="upload-video__cancel">CANCEL</h3>
+        <Link to="/" className="upload-video__cancel">
+          CANCEL
+        </Link>
       </div>
     </>
   );
