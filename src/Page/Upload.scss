@@ -11,9 +11,36 @@
 
   &__thumbnail-title {
     color: colours.$secondary-text;
+    padding-bottom: 0.5rem;
   }
 
   &__thumbnail {
     width: 100%;
+    border-radius: 4px;
+  }
+
+  &__form {
+    padding: 1rem 0;
+  }
+
+  &__form-label {
+    padding-bottom: 0.75rem;
+  }
+
+  &__form-input {
+    padding-left: 0.75rem;
+    height: 2.25rem;
+    margin-bottom: 0.5rem;
+    &--description {
+      margin: 0.35rem 0 1rem 0;
+      padding: 0.75rem;
+      height: 4.5rem;
+    }
+  }
+
+  &__cancel {
+    color: colours.$primary-cta;
+    text-align: center;
+    padding: 2rem 0;
   }
 }

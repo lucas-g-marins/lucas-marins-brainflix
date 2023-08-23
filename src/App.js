@@ -7,8 +7,8 @@ import Upload from "./Page/Upload";
 function App() {
   return (
     <>
-      <Header />
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/" element={<MainVideo />} />
           <Route path="upload" element={<Upload />} />
