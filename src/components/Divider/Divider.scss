@@ -20,4 +20,12 @@
       display: none;
     }
   }
+
+  &--only-tablet {
+    display: none;
+
+    @include global.tablet {
+      display: block;
+    }
+  }
 }

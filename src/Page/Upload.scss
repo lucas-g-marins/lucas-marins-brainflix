@@ -7,16 +7,28 @@
 
   &__title {
     padding: 1rem 0;
+
+    @include global.tablet {
+      padding-bottom: 0.5rem;
+    }
   }
 
   &__thumbnail-title {
     color: colours.$secondary-text;
     padding-bottom: 0.5rem;
+
+    @include global.tablet {
+      padding-top: 1rem;
+    }
   }
 
   &__thumbnail {
     width: 100%;
     border-radius: 4px;
+
+    @include global.tablet {
+      width: 50%;
+    }
   }
 
   &__form {
@@ -25,6 +37,7 @@
 
   &__form-label {
     padding-bottom: 0.75rem;
+    font-size: 0.75rem;
   }
 
   &__form-input {

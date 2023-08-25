@@ -1,16 +1,10 @@
 import "./NextVideosSection.scss";
 import NextVideo from "../NextVideo/NextVideo";
+import { useState } from "react";
 
 function NextVideosSection({ mainVideoId, videosArray, updateState }) {
-  // filter out main video
-  function filterCurrentVid(video) {
-    if (video.id === mainVideoId.id) {
-      return false;
-    }
-    return true;
-  }
-
-  let nextVidArr = videosArray.filter(filterCurrentVid);
+  // filter out current video from next video
+  let nextVidArr = videosArray.filter((video) => video.id !== mainVideoId);
 
   return (
     <>

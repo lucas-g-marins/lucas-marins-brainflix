@@ -11,6 +11,7 @@ function Upload() {
       <Divider className="divider" />
       <div className="upload-video">
         <h1 className="upload-video__title">Upload Video</h1>
+        <Divider className="divider divider--only-tablet" />
         <div className="upload-video__thumbnail-section">
           <h4 className="upload-video__thumbnail-title">VIDEO THUMBNAIL</h4>
           <img className="upload-video__thumbnail" src={VideoThumbnail} />
@@ -32,6 +33,7 @@ function Upload() {
               placeholder="Add a description to your video"
             ></textarea>
           </label>
+          <Divider className="divider divider--only-tablet" />
           <Button text="PUBLISH" img={PublishIcon} />
         </form>
         <Link to="/" className="upload-video__cancel">

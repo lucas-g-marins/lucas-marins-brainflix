@@ -1,13 +1,10 @@
 import "./NextVideo.scss";
 
 function NextVideo({ title, channel, image, updateState, id, vidArr }) {
-  function findVideo(element) {
-    const result = vidArr.find(({ id }) => id === element);
-    return result;
-  }
+  // const result = vidArr.find(({ id }) => id === element);
 
   return (
-    <div onClick={() => updateState(findVideo(id))} className="next-video">
+    <div onClick={() => updateState(id)} className="next-video">
       <div className="next-video__image-container">
         <img className="next-video__image" src={image}></img>
       </div>
