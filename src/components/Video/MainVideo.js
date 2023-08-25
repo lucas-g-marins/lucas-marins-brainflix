@@ -102,7 +102,7 @@ function MainVideo() {
               {videoContent.description}
             </p>
           </div>
-          {/* <CommentSection videoComments={videoContent.comments} /> */}
+          <CommentSection videoComments={videoContent.comments} />
         </div>
         <div className="brainflix-content__next-video">
           <NextVideosSection
