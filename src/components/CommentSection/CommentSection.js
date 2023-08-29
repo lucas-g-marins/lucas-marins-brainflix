@@ -5,14 +5,30 @@ import CommentIcon from "../../assets/Icons/add_comment.svg";
 import "./CommentSection.scss";
 import Comments from "../Comments/Comments";
 import Divider from "../Divider/Divider";
+import React, { useEffect, useState } from "react";
 
 function CommentSection({ videoComments }) {
+  const [commentAmount, setCommentAmount] = useState(0);
+  const [comments, setComments] = useState([]);
+
   // count amount of comments
-  let noComments = videoComments.length;
+  useEffect(() => {
+    if (videoComments) {
+      setCommentAmount(videoComments.length);
+    }
+  }, [comments]);
+
+  useEffect(() => {
+    if (videoComments) {
+      setComments(videoComments);
+    }
+  }, [videoComments]);
+
+  console.log(videoComments);
 
   return (
     <>
-      <h3 className="comment-section__copy">{noComments} comments</h3>
+      <h3 className="comment-section__copy">{commentAmount} comments</h3>
       <div className="comment-section__input-comment-container">
         <div className="comment-section__avatar-container">
           <Avatar src={profilePic} className="avatar" />
@@ -33,7 +49,7 @@ function CommentSection({ videoComments }) {
         </form>
       </div>
       <Divider className="divider" />
-      {videoComments.map((content) => (
+      {comments.map((content) => (
         <Comments
           key={content.id}
           name={content.name}

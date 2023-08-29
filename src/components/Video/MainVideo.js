@@ -4,14 +4,8 @@ import Divider from "../Divider/Divider";
 import ViewsIcon from "../../assets/Icons/views.svg";
 import LikesIcon from "../../assets/Icons/likes.svg";
 import CommentSection from "../CommentSection/CommentSection";
-import Videos from "../../data/videos.json";
-import VideoDetails from "../../data/video-details.json";
 import NextVideosSection from "../NextVideosSection/NextVideosSection";
 import axios from "axios";
-
-const videoStats = VideoDetails;
-
-const videoTitles = Videos;
 
 // function for setting readable date from timestamp
 function setDate(date) {
@@ -26,12 +20,6 @@ function setDate(date) {
 const apiKey = "0be02211-b14f-4e81-8abb-f62196a2bbbf";
 
 function MainVideo() {
-  // function for finding specific video
-  function findVideo(element) {
-    const result = videoStats.find(({ id }) => id === element);
-    return result;
-  }
-
   //
   const [allVideos, setAllVideos] = useState([]);
 
@@ -57,9 +45,7 @@ function MainVideo() {
   }, [videoId]);
 
   // state for video content
-  const [videoContent, setVideoContent] = useState(
-    `https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=0be02211-b14f-4e81-8abb-f62196a2bbbf`
-  );
+  const [videoContent, setVideoContent] = useState({});
 
   return (
     <div className="main-video">
