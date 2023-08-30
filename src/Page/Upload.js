@@ -12,33 +12,47 @@ function Upload() {
       <div className="upload-video">
         <h1 className="upload-video__title">Upload Video</h1>
         <Divider className="divider divider--only-tablet" />
-        <div className="upload-video__thumbnail-section">
-          <h4 className="upload-video__thumbnail-title">VIDEO THUMBNAIL</h4>
-          <img className="upload-video__thumbnail" src={VideoThumbnail} />
+        <div className="upload-video__content">
+          <div className="upload-video__thumbnail-section">
+            <h4 className="upload-video__thumbnail-title">VIDEO THUMBNAIL</h4>
+            <img className="upload-video__thumbnail" src={VideoThumbnail} />
+          </div>
+          <form className="upload-video__form">
+            <label className="upload-video__form-label">
+              TITLE YOUR VIDEO
+              <input
+                className="upload-video__form-input"
+                type="text"
+                placeholder="Add a title to your video"
+              ></input>
+            </label>
+            <label className="upload-video__form-label">
+              ADD A VIDEO DESCRIPTION
+              <textarea
+                className="upload-video__form-input--description"
+                type="text"
+                placeholder="Add a description to your video"
+              ></textarea>
+            </label>
+          </form>
         </div>
-        <form className="upload-video__form">
-          <label className="upload-video__form-label">
-            TITLE YOUR VIDEO
-            <input
-              className="upload-video__form-input"
-              type="text"
-              placeholder="Add a title to your video"
-            ></input>
-          </label>
-          <label className="upload-video__form-label">
-            ADD A VIDEO DESCRIPTION
-            <textarea
-              className="upload-video__form-input--description"
-              type="text"
-              placeholder="Add a description to your video"
-            ></textarea>
-          </label>
-          <Divider className="divider divider--only-tablet" />
-          <Button text="PUBLISH" img={PublishIcon} />
-        </form>
-        <Link to="/" className="upload-video__cancel">
-          CANCEL
-        </Link>
+        <Divider className="divider divider--only-tablet" />
+        <Button
+          text="PUBLISH"
+          img={PublishIcon}
+          className="button button--mobile"
+        />
+
+        <div className="upload-video__footer">
+          <Link to="/" className="upload-video__cancel">
+            CANCEL
+          </Link>
+          <Button
+            text="PUBLISH"
+            img={PublishIcon}
+            className="button button--tablet"
+          />
+        </div>
       </div>
     </>
   );

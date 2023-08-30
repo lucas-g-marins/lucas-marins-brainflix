@@ -27,5 +27,11 @@
     @include global.tablet {
       display: block;
     }
+
+    @include global.desktop {
+      display: block;
+      width: 100%;
+      margin: 0;
+    }
   }
 }

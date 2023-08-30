@@ -44,7 +44,7 @@ function CommentSection({ videoComments }) {
             ></textarea>
           </label>
           <div className="comment-section__button-container">
-            <Button text="COMMENT" img={CommentIcon} />
+            <Button text="COMMENT" img={CommentIcon} className="button" />
           </div>
         </form>
       </div>

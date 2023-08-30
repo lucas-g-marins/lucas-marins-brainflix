@@ -40,7 +40,12 @@ function Header() {
               </div>
             </div>
             <div className="header__button-container">
-              <Button text="UPLOAD" img={uploadIcon} onClick={handleClick} />
+              <Button
+                text="UPLOAD"
+                img={uploadIcon}
+                onClick={handleClick}
+                className="button"
+              />
             </div>
             <div className="header__avatar-container">
               <Avatar

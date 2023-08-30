@@ -5,11 +5,35 @@
 .upload-video {
   padding: 0 1rem;
 
+  @include global.desktop {
+    width: 85%;
+    margin: auto;
+  }
+
   &__title {
     padding: 1rem 0;
 
     @include global.tablet {
       padding-bottom: 0.5rem;
+    }
+
+    @include global.desktop {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  &__content {
+    @include global.desktop {
+      display: flex;
+      width: 80%;
+    }
+  }
+
+  &__thumbnail-section {
+    @include global.desktop {
+      width: 40%;
+      margin-right: 2rem;
+      padding-bottom: 1rem;
     }
   }
 
@@ -18,6 +42,10 @@
     padding-bottom: 0.5rem;
 
     @include global.tablet {
+      padding-top: 1rem;
+    }
+
+    @include global.desktop {
       padding-top: 1rem;
     }
   }
@@ -29,10 +57,19 @@
     @include global.tablet {
       width: 50%;
     }
+
+    @include global.desktop {
+      width: 100%;
+    }
   }
 
   &__form {
     padding: 1rem 0;
+
+    @include global.desktop {
+      width: 60%;
+      padding-top: 1.5rem;
+    }
   }
 
   &__form-label {
@@ -60,5 +97,27 @@
     display: flex;
     justify-content: center;
     text-decoration: none;
+
+    @include global.tablet {
+      padding-right: 4rem;
+    }
+
+    @include global.desktop {
+      padding-right: 4rem;
+    }
+  }
+
+  &__footer {
+    @include global.tablet {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    @include global.desktop {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
   }
 }
