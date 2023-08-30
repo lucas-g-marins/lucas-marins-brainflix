@@ -26,6 +26,7 @@
     @include global.desktop {
       display: flex;
       width: 80%;
+      padding-top: 1.5rem;
     }
   }
 
@@ -42,10 +43,6 @@
     padding-bottom: 0.5rem;
 
     @include global.tablet {
-      padding-top: 1rem;
-    }
-
-    @include global.desktop {
       padding-top: 1rem;
     }
   }
@@ -68,13 +65,18 @@
 
     @include global.desktop {
       width: 60%;
-      padding-top: 1.5rem;
+      padding-top: 0.75rem;
     }
   }
 
   &__form-label {
     padding-bottom: 0.75rem;
     font-size: 0.75rem;
+
+    &--desktop {
+      padding-top: 0.75rem;
+      height: 75%;
+    }
   }
 
   &__form-input {
@@ -85,6 +87,11 @@
       margin: 0.35rem 0 1rem 0;
       padding: 0.75rem;
       height: 4.5rem;
+
+      @include global.desktop {
+        height: 100%;
+        margin-bottom: 0;
+      }
     }
   }
 

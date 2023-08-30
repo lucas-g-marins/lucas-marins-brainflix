@@ -26,7 +26,7 @@ function Upload() {
                 placeholder="Add a title to your video"
               ></input>
             </label>
-            <label className="upload-video__form-label">
+            <label className="upload-video__form-label upload-video__form-label--desktop">
               ADD A VIDEO DESCRIPTION
               <textarea
                 className="upload-video__form-input--description"
