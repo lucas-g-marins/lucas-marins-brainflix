@@ -1,6 +1,5 @@
 import "./NextVideosSection.scss";
 import NextVideo from "../NextVideo/NextVideo";
-import { useState } from "react";
 
 function NextVideosSection({ mainVideoId, videosArray, updateState }) {
   // filter out current video from next video

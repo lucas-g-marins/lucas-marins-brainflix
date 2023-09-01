@@ -6,10 +6,10 @@ import LikesIcon from "../../assets/Icons/likes.svg";
 import CommentSection from "../CommentSection/CommentSection";
 import NextVideosSection from "../NextVideosSection/NextVideosSection";
 import axios from "axios";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 // function for setting readable date from timestamp
-function setDate(date) {
+function formatDate(date) {
   let newDate = new Date(date);
   let year = newDate.getFullYear();
   let month = newDate.getMonth() + 1;
@@ -26,17 +26,12 @@ function MainVideo() {
   //
   const [allVideos, setAllVideos] = useState([]);
 
-  // retrieve videos array from axios
+  // // retrieve videos array from axios
   useEffect(() => {
     axios
       .get(`https://project-2-api.herokuapp.com/videos?api_key=${apiKey}`)
       .then((result) => setAllVideos(result.data));
   }, []);
-
-  // use state for video
-  const [videoID, setVideoId] = useState(
-    "84e96018-4022-434e-80bf-000ce4cd12b8"
-  );
 
   // retrieve video and details
   useEffect(() => {
@@ -47,13 +42,15 @@ function MainVideo() {
         )
         .then((result) => setVideoContent(result.data));
     } else {
-      axios
-        .get(
-          `https://project-2-api.herokuapp.com/videos/${allVideos[0].id}?api_key=${apiKey}`
-        )
-        .then((result) => setVideoContent(result.data));
+      if (allVideos[0]) {
+        axios
+          .get(
+            `https://project-2-api.herokuapp.com/videos/${allVideos[0].id}?api_key=${apiKey}`
+          )
+          .then((result) => setVideoContent(result.data));
+      }
     }
-  }, [videoId]);
+  }, [videoId, allVideos]);
 
   // state for video content
   const [videoContent, setVideoContent] = useState({});
@@ -78,7 +75,7 @@ function MainVideo() {
             <div className="main-video__channel-date">
               <h3 className="main-video__channel">By {videoContent.channel}</h3>
               <h4 className="main-video__stats-copy">
-                {setDate(videoContent.timestamp)}
+                {formatDate(videoContent.timestamp)}
               </h4>
             </div>
             <div className="main-video__views-likes">
@@ -103,9 +100,8 @@ function MainVideo() {
         </div>
         <div className="brainflix-content__next-video">
           <NextVideosSection
-            mainVideoId={videoID}
+            mainVideoId={videoContent.id}
             videosArray={allVideos}
-            // updateState={setVideoId}
           />
         </div>
       </div>

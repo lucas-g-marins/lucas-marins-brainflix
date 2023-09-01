@@ -15,7 +15,11 @@ function Upload() {
         <div className="upload-video__content">
           <div className="upload-video__thumbnail-section">
             <h4 className="upload-video__thumbnail-title">VIDEO THUMBNAIL</h4>
-            <img className="upload-video__thumbnail" src={VideoThumbnail} />
+            <img
+              className="upload-video__thumbnail"
+              src={VideoThumbnail}
+              alt="thumbnail"
+            />
           </div>
           <form className="upload-video__form">
             <label className="upload-video__form-label">
