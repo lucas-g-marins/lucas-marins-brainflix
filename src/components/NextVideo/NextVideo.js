@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function NextVideo({ title, channel, image, updateState, id, vidArr }) {
   return (
     <Link to={`/video/${id}`} className="next-video__link">
-      <div onClick={() => updateState(id)} className="next-video">
+      <div className="next-video">
         <div className="next-video__image-container">
           <img className="next-video__image" src={image}></img>
         </div>
@@ -18,3 +18,5 @@ function NextVideo({ title, channel, image, updateState, id, vidArr }) {
 }
 
 export default NextVideo;
+
+// onClick={() => updateState(id)}

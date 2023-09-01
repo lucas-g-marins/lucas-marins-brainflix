@@ -40,11 +40,19 @@ function MainVideo() {
 
   // retrieve video and details
   useEffect(() => {
-    axios
-      .get(
-        `https://project-2-api.herokuapp.com/videos/${videoID}?api_key=${apiKey}`
-      )
-      .then((result) => setVideoContent(result.data));
+    if (videoId) {
+      axios
+        .get(
+          `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=${apiKey}`
+        )
+        .then((result) => setVideoContent(result.data));
+    } else {
+      axios
+        .get(
+          `https://project-2-api.herokuapp.com/videos/${allVideos[0].id}?api_key=${apiKey}`
+        )
+        .then((result) => setVideoContent(result.data));
+    }
   }, [videoId]);
 
   // state for video content
@@ -97,7 +105,7 @@ function MainVideo() {
           <NextVideosSection
             mainVideoId={videoID}
             videosArray={allVideos}
-            updateState={setVideoId}
+            // updateState={setVideoId}
           />
         </div>
       </div>
