@@ -6,6 +6,7 @@ import LikesIcon from "../../assets/Icons/likes.svg";
 import CommentSection from "../CommentSection/CommentSection";
 import NextVideosSection from "../NextVideosSection/NextVideosSection";
 import axios from "axios";
+import { Link, useParams } from "react-router-dom";
 
 // function for setting readable date from timestamp
 function setDate(date) {
@@ -20,6 +21,8 @@ function setDate(date) {
 const apiKey = "0be02211-b14f-4e81-8abb-f62196a2bbbf";
 
 function MainVideo() {
+  const { videoId } = useParams();
+
   //
   const [allVideos, setAllVideos] = useState([]);
 
@@ -31,7 +34,7 @@ function MainVideo() {
   }, []);
 
   // use state for video
-  const [videoId, setVideoId] = useState(
+  const [videoID, setVideoId] = useState(
     "84e96018-4022-434e-80bf-000ce4cd12b8"
   );
 
@@ -39,7 +42,7 @@ function MainVideo() {
   useEffect(() => {
     axios
       .get(
-        `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=${apiKey}`
+        `https://project-2-api.herokuapp.com/videos/${videoID}?api_key=${apiKey}`
       )
       .then((result) => setVideoContent(result.data));
   }, [videoId]);
@@ -92,7 +95,7 @@ function MainVideo() {
         </div>
         <div className="brainflix-content__next-video">
           <NextVideosSection
-            mainVideoId={videoId}
+            mainVideoId={videoID}
             videosArray={allVideos}
             updateState={setVideoId}
           />

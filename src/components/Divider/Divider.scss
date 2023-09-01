@@ -26,12 +26,22 @@
 
     @include global.tablet {
       display: block;
+      margin: 0;
     }
 
     @include global.desktop {
       display: block;
       width: 100%;
       margin: 0;
+    }
+  }
+
+  &--td-full {
+    @include global.tablet {
+      width: 100%;
+    }
+
+    @include global.desktop {
     }
   }
 }

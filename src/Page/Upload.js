@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function Upload() {
   return (
     <>
-      <Divider className="divider" />
+      <Divider className="divider divider--td-full" />
       <div className="upload-video">
         <h1 className="upload-video__title">Upload Video</h1>
         <Divider className="divider divider--only-tablet" />

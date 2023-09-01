@@ -11,6 +11,11 @@
     width: 40%;
   }
 
+  &__link {
+    text-decoration: none;
+    color: colours.$primary-text;
+  }
+
   &__image-container {
     padding-right: 1rem;
   }
