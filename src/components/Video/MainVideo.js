@@ -26,27 +26,27 @@ function MainVideo() {
   //
   const [allVideos, setAllVideos] = useState([]);
 
-  // // retrieve videos array from axios
+  // retrieve videos from local server
+  const baseURL = process.env.REACT_APP_VIDEO_DATA;
+
   useEffect(() => {
-    axios
-      .get(`https://project-2-api.herokuapp.com/videos?api_key=${apiKey}`)
-      .then((result) => setAllVideos(result.data));
+    const fetchData = async () => {
+      const { data } = await axios.get(`${baseURL}/video-data`);
+      setAllVideos(data);
+    };
+    fetchData();
   }, []);
 
   // retrieve video and details
   useEffect(() => {
     if (videoId) {
       axios
-        .get(
-          `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=${apiKey}`
-        )
+        .get(`${baseURL}/video-data/${videoId}`)
         .then((result) => setVideoContent(result.data));
     } else {
       if (allVideos[0]) {
         axios
-          .get(
-            `https://project-2-api.herokuapp.com/videos/${allVideos[0].id}?api_key=${apiKey}`
-          )
+          .get(`${baseURL}/video-data/${allVideos[0].id}`)
           .then((result) => setVideoContent(result.data));
       }
     }
