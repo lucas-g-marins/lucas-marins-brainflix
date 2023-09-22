@@ -5,9 +5,12 @@ import Button from "../components/Button/Button";
 import PublishIcon from "../assets/Icons/publish.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import axios from "axios";
 
 function Upload() {
   let navigate = useNavigate();
+
+  const baseURL = process.env.REACT_APP_VIDEO_DATA;
 
   // use state and handles for form
   const [title, setTitle] = useState("");
@@ -24,6 +27,10 @@ function Upload() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    axios
+      .post(`${baseURL}/videos`, { title: title, description: description })
+      .then((result) => console.log(result))
+      .catch((e) => console.log(e));
     setpopupClass(
       "upload-video__pop-up-title upload-video__pop-up-title--show"
     );

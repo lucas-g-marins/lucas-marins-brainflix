@@ -24,8 +24,6 @@ function CommentSection({ videoComments }) {
     }
   }, [videoComments]);
 
-  console.log(videoComments);
-
   return (
     <>
       <h3 className="comment-section__copy">{commentAmount} comments</h3>

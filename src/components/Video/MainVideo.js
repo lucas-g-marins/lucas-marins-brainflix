@@ -31,7 +31,7 @@ function MainVideo() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const { data } = await axios.get(`${baseURL}/video-data`);
+      const { data } = await axios.get(`${baseURL}/videos`);
       setAllVideos(data);
     };
     fetchData();
@@ -41,12 +41,12 @@ function MainVideo() {
   useEffect(() => {
     if (videoId) {
       axios
-        .get(`${baseURL}/video-data/${videoId}`)
+        .get(`${baseURL}/videos/${videoId}`)
         .then((result) => setVideoContent(result.data));
     } else {
       if (allVideos[0]) {
         axios
-          .get(`${baseURL}/video-data/${allVideos[0].id}`)
+          .get(`${baseURL}/videos/${allVideos[0].id}`)
           .then((result) => setVideoContent(result.data));
       }
     }
